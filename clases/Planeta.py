@@ -65,7 +65,7 @@ class Planeta():
         Returns:
             -  Diametro del planeta
         """
-        return self._radio
+        return self._radio*2
     
 class PlanetaExoplanetario(Planeta):
     """
