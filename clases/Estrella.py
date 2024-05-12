@@ -41,4 +41,30 @@ class Estrella():
         """
         return  float( l_sol * (self._masa/m_sol)**3.5)
     
+    def __str__(self):
+        """
+        Proporciona un str con la información de la estrella
+
+        Parámetros:
+            - nombre: El nombre de la estrella. (público)
+            - masa: La masa de la estrella. (protegido)
+            - radio: El radio de la estrella. (protegido)
+            - temperaturasuperficial: La temperatura superficial de la estrella. (protegido)
+            - distancia: La distancia de la estrella. (protegido)
+            - movimientopropio: El movimiento propio de la estrella. (protegido)
+        returns:
+
+        - una frase con los datos de la estrella
+        """
+        return print("La estrella ", self.nombre," tiene una masa de ", self._masa," , un radio de "
+                     , self._radioestrella, ", una temperatura superficial de ", self._teff
+                     , ". Está a una distancia de ", self._distancia, " y tiene un movimiento propio de ",self._movimientopropio)
     
+    
+    def diametro(self):
+        """
+        Calcula el diametro de la estrella
+        Returns:
+            - El diametro de la estrella
+        """
+        return self._radioestrella**2
