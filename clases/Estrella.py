@@ -67,4 +67,4 @@ class Estrella():
         Returns:
             - El diametro de la estrella
         """
-        return self._radioestrella**2
+        return self._radioestrella*2
