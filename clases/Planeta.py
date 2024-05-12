@@ -37,6 +37,35 @@ class Planeta():
             return float(2*np.pi*np.sqrt((self._a**3)/(g*self._masaplanetaria)))
         else:
             return 0
+        
+    def __str__(self):
+        """
+        Proporciona un str con la información del planeta
+        Parámetros:
+        - nombre: El nombre del planeta.
+        - estrella_protegida: La estrella alrededor de la cual orbita el planeta.
+        - masaplanetaria: La masa del planeta en masas de Júpiter.
+        - radio: El radio del planeta.
+        - a: El semieje mayor de la órbita del planeta.
+        - i: La inclinación de la órbita del planeta.
+        - e: La excentricidad de la órbita del planeta.
+        - periastron: El argumento del periastron del planeta.
+        returns:
+
+        - una frase con los datos del planeta
+        """
+        return print("El planeta ", self._nombre," tiene una masa de "
+                     ,self._masaplanetaria," [Mjup] con un radio de "
+                     ,self._radio," orbita la estrella "
+                     ,self._estrella_protegida," con un semieje mayor de ",self._a, " , una inclinación de ", self._i, " y una excentricidad de ", self._e, ". con un periastron de ",self._w)
+    def diametro_pl(self):
+        """
+        Calcula el diametro del planeta
+
+        Returns:
+            -  Diametro del planeta
+        """
+        return self._radio
     
 class PlanetaExoplanetario(Planeta):
     """
